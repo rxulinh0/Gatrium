@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".pedometer_question"
+    android:background="@color/main_orange">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp">
+
+        <TextView
+            android:id="@+id/title_pedometer_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserratblack"
+            android:text="@string/do_you_want_to_use_pedometer"
+            android:textColor="@color/main_sky_blue"
+            android:textSize="45sp" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/pedometer_yes_sure_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title_pedometer_question"
+            android:layout_marginTop="50dp"
+            app:cardBackgroundColor="@color/main_sky_blue"
+            app:cardCornerRadius="50dp"
+            app:cardElevation="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/montserratextrabold"
+                android:text="@string/yes_sure"
+                android:textColor="@color/main_orange"
+                android:textSize="22sp" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/pedometer_no_thanks_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title_pedometer_question"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="50dp"
+            app:cardBackgroundColor="@color/main_sky_blue"
+            app:cardCornerRadius="50dp"
+            app:cardElevation="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/montserratextrabold"
+                android:text="@string/no_thanks"
+                android:textColor="@color/main_orange"
+                android:textSize="22sp" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/set_goal_pedometer_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pedometer_yes_sure_card"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/montserratblack"
+            android:text="@string/set_steps_number_for_walk"
+            android:textColor="@color/main_purple"
+            android:textSize="45sp"
+            android:visibility="gone"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/pedometer_ten_thousand_steps_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/set_goal_pedometer_text"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="25dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="50dp"
+            app:cardElevation="5dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/montserratextrabold"
+                android:text="@string/ten_thousand_steps"
+                android:textColor="@color/main_orange"
+                android:textSize="20sp" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/pedometer_five_thousand_steps_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/set_goal_pedometer_text"
+            android:layout_marginTop="25dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="50dp"
+            app:cardElevation="5dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/montserratextrabold"
+                android:text="@string/five_thousand_steps"
+                android:textColor="@color/main_orange"
+                android:textSize="20sp" />
+        </com.google.android.material.card.MaterialCardView>
+        <ImageView
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/ic_baseline_arrow_circle_right_24"
+            android:id="@+id/pedometer_question_arrow_forward"
+            android:visibility="gone"/>
+    </RelativeLayout>
+</RelativeLayout>

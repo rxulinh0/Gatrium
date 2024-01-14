@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".pedometer_main"
+    android:background="@color/main_purple">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="30dp">
+
+        <TextView
+            android:id="@+id/pedometer_walk_progress_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/montserratblack"
+            android:text="@string/walk_progress"
+            android:textColor="@color/main_sky_blue"
+            android:textSize="40sp"/>
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pedometer_walk_progress_text"
+            android:layout_alignParentEnd="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="49dp"
+            android:layout_marginEnd="46dp"
+            app:indicatorColor="@color/white"
+            app:indicatorSize="250dp"
+            android:progress="15"
+            app:trackColor="@color/main_sky_blue"
+            app:trackCornerRadius="314dp"
+            app:trackThickness="25dp"
+            android:id="@+id/walk_progress_ui"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/walk_progress_ui"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/montserratblack"
+            android:text="@string/walk_goal_accomplished"
+            android:textAlignment="center"
+            android:textColor="@color/green_positive"
+            android:textSize="20sp"
+            android:id="@+id/pedometer_walk_progress_message"/>
+        <ImageView
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/ic_baseline_remove_circle_24"
+            android:id="@+id/pedometer_stop_walk_button"
+            />
+        <ImageView
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/ic_baseline_check_circle_24"
+            android:id="@+id/pedometer_check_walk"
+            android:visibility="gone"/>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".new_reminder_medicines"
+    android:background="@color/main_orange">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:id="@+id/title_new_reminder_medicines"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserratblack"
+            android:text="@string/new_reminder_medicine_question"
+            android:textColor="@color/main_sky_blue"
+            android:textSize="60sp" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/new_reminder_medicines_hours_interval_card"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/title_new_reminder_medicines"
+            android:layout_marginTop="50dp"
+            app:cardBackgroundColor="@color/main_sky_blue"
+            app:cardCornerRadius="50dp"
+            app:cardElevation="3dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textField_frequency_medicines"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:hint="@string/how_often_does_your_pet_need_the_medicine"
+                    app:boxStrokeWidth="0dp"
+                    app:boxStrokeWidthFocused="0dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/new_reminder_medicines_hours_interval_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/main_sky_blue"
+                        android:fontFamily="@font/montserratblack"
+                        android:textColor="@color/main_orange"
+                        android:textSize="20sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/new_reminder_medicines_hours_interval_card"
+            android:layout_marginTop="25dp"
+            app:cardBackgroundColor="@color/main_sky_blue"
+            app:cardCornerRadius="50dp"
+            app:cardElevation="3dp"
+            android:id="@+id/new_reminder_medicines_name_card">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textField_name_medicines"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:hint="@string/set_name_medicine_reminder"
+                    app:boxStrokeWidth="0dp"
+                    app:boxStrokeWidthFocused="0dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/new_reminder_medicines_name_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/main_sky_blue"
+                        android:fontFamily="@font/montserratblack"
+                        android:textColor="@color/main_orange"
+                        android:textSize="20sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            app:cardBackgroundColor="@color/main_sky_blue"
+            app:cardCornerRadius="314dp"
+            app:cardElevation="3dp"
+            android:id="@+id/new_reminder_medicines_arrow_forward_card">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_baseline_arrow_forward_24" />
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".new_cat_shower_reminder"
+    android:background="@color/main_sky_blue">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp">
+
+        <TextView
+            android:id="@+id/title_how_frequently_cat_shower"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserratblack"
+            android:text="@string/how_frequently_shower_cat"
+            android:textColor="@color/main_orange"
+            android:textSize="50dp" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/each_four_weeks_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title_how_frequently_cat_shower"
+            android:layout_marginTop="25dp"
+            app:cardBackgroundColor="@color/main_orange"
+            app:cardCornerRadius="50dp"
+            app:cardElevation="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/montserratextrabold"
+                    android:text="@string/each_four_weeks"
+                    android:textColor="@color/main_sky_blue"
+                    android:textSize="30dp" />
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/each_six_weeks_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/each_four_weeks_card"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="25dp"
+            app:cardBackgroundColor="@color/main_orange"
+            app:cardCornerRadius="50dp"
+            app:cardElevation="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/montserratextrabold"
+                    android:text="@string/each_six_weeks"
+                    android:textColor="@color/main_sky_blue"
+                    android:textSize="30dp" />
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/each_two_months_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/each_six_weeks_card"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            app:cardBackgroundColor="@color/main_orange"
+            app:cardCornerRadius="50dp"
+            app:cardElevation="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/montserratextrabold"
+                    android:text="@string/each_two_months"
+                    android:textColor="@color/main_sky_blue"
+                    android:textSize="30dp" />
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/each_two_months_card"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="25dp"
+            app:cardBackgroundColor="@color/main_orange"
+            app:cardCornerRadius="50dp"
+            app:cardElevation="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/other_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/montserratextrabold"
+                    android:text="@string/other_days"
+                    android:textColor="@color/main_sky_blue"
+                    android:textSize="30dp" />
+
+                <RelativeLayout
+                    android:id="@+id/frequency_rellay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/other_text"
+                    android:visibility="gone">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/cat_shower_frequency_input"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="5dp"
+                        android:fontFamily="@font/montserratbold"
+                        android:hint="@string/type_frequency_days"
+                        android:textColor="@color/main_sky_blue"/>
+                </RelativeLayout>
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true">
+
+            <ImageView
+                android:id="@+id/cat_shower_arrow_forward"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_baseline_arrow_forward_24"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

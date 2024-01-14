@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/main_sky_blue"
+    tools:context=".HomeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ScrollView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/HomeMainRelLay"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/themeslogo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="225dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="20dp"
+                android:src="@mipmap/gatrium_logotype" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/themesCard"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="30dp"
+                app:cardCornerRadius="314dp"
+                app:cardElevation="15dp"
+                app:cardMaxElevation="20dp"
+                app:strokeColor="@color/main_sky_blue"
+                app:strokeWidth="1dp">
+
+                <ImageView
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginBottom="40dp"
+                    android:src="@drawable/ic_baseline_color_lens_24" />
+            </com.google.android.material.card.MaterialCardView>
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/pet_profile_carousel_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
+            android:layout_below="@+id/themeslogo"
+            android:layout_marginStart="21dp"
+            android:layout_marginEnd="21dp"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            app:layoutManager="com.google.android.material.carousel.CarouselLayoutManager" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pet_profile_carousel_recycler_view"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="21dp"
+            android:layout_marginBottom="30dp"
+            android:id="@+id/reminder_task_rellay">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/reminders_button"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_alignParentStart="true"
+                app:cardCornerRadius="30dp"
+                app:cardElevation="3dp"
+                app:cardMaxElevation="4dp"
+                app:strokeColor="@color/main_sky_blue"
+                app:strokeWidth="1dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/montserratblack"
+                        android:text="@string/reminders"
+                        android:textColor="@color/main_sky_blue"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/tasks_button"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="10dp"
+                app:cardCornerRadius="30dp"
+                app:cardElevation="3dp"
+                app:cardMaxElevation="4dp"
+                app:strokeColor="@color/main_sky_blue"
+                app:strokeWidth="1dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/montserratblack"
+                        android:text="@string/tasks"
+                        android:textColor="@color/main_sky_blue"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </RelativeLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/homeFragmentWidgetRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/reminder_task_rellay"
+            android:layout_marginStart="21dp"
+            android:layout_marginEnd="21dp"
+            android:clipChildren="false"
+            android:clipToPadding="false"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/homeFragmentNotesRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/homeFragmentNotesRecyclerView"
+            tools:ignore="NotSibling"
+            android:layout_marginStart="21dp"
+            android:layout_marginEnd="21dp"
+            android:clipChildren="false"
+            android:clipToPadding="false"/>
+    </RelativeLayout>
+    </ScrollView>
+</FrameLayout>

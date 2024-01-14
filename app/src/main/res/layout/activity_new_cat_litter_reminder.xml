@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".new_cat_litter_reminder"
+    android:background="@color/main_sky_blue">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp">
+
+        <TextView
+            android:id="@+id/title_how_frequently_cat_litter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserratblack"
+            android:text="@string/how_frequently_change_cat_litter"
+            android:textColor="@color/main_orange"
+            android:textSize="50dp" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/weekly_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title_how_frequently_cat_litter"
+            android:layout_marginTop="25dp"
+            app:cardBackgroundColor="@color/main_orange"
+            app:cardCornerRadius="50dp"
+            app:cardElevation="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/montserratextrabold"
+                    android:text="@string/weekly"
+                    android:textColor="@color/main_sky_blue"
+                    android:textSize="30dp" />
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/every_two_weeks_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/weekly_card"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="25dp"
+            app:cardBackgroundColor="@color/main_orange"
+            app:cardCornerRadius="50dp"
+            app:cardElevation="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/montserratextrabold"
+                    android:text="@string/every_two_weeks"
+                    android:textColor="@color/main_sky_blue"
+                    android:textSize="30dp" />
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/every_two_weeks_card"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="25dp"
+            app:cardBackgroundColor="@color/main_orange"
+            app:cardCornerRadius="50dp"
+            app:cardElevation="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/other_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/montserratextrabold"
+                    android:text="@string/other_days"
+                    android:textColor="@color/main_sky_blue"
+                    android:textSize="30dp" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/other_text"
+                    android:id="@+id/frequency_rellay">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="5dp"
+                        android:fontFamily="@font/montserratbold"
+                        android:hint="@string/type_frequency_days"
+                        android:textColor="@color/main_sky_blue"
+                        android:id="@+id/frequency_input"/>
+                </RelativeLayout>
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true">
+
+            <ImageView
+                android:id="@+id/arrow_forward"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_baseline_arrow_forward_24"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>
