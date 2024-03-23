@@ -44,14 +44,15 @@
                         android:fontFamily="@font/montserratblack"
                         android:text="@string/food"
                         android:textColor="@color/main_sky_blue"
-                        android:textSize="22sp" />
+                        android:textSize="22sp"
+                        android:id="@+id/cat_food_card_text"/>
 
                     <ImageView
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="25dp"
-                        android:src="@drawable/ic_catfood" />
+                        android:src="@drawable/ic_catfood"/>
                 </RelativeLayout>
             </com.google.android.material.card.MaterialCardView>
 
@@ -72,6 +73,7 @@
                         android:layout_centerHorizontal="true"
                         android:fontFamily="@font/montserratblack"
                         android:text="@string/refill_water"
+                        android:id="@+id/cat_refill_water_text"
                         android:textColor="@color/main_sky_blue"
                         android:textSize="15sp" />
 
@@ -103,6 +105,7 @@
                         android:layout_centerHorizontal="true"
                         android:fontFamily="@font/montserratblack"
                         android:text="@string/change_cat_litter"
+                        android:id="@+id/cat_change_litter_card_text"
                         android:textColor="@color/main_sky_blue"
                         android:textSize="12sp" />
 
@@ -134,6 +137,7 @@
                         android:layout_centerHorizontal="true"
                         android:fontFamily="@font/montserratblack"
                         android:text="@string/shower"
+                        android:id="@+id/cat_shower_card_text"
                         android:textColor="@color/main_sky_blue"
                         android:textSize="20sp" />
 
@@ -166,6 +170,7 @@
                         android:layout_centerHorizontal="true"
                         android:fontFamily="@font/montserratblack"
                         android:text="@string/walk"
+                        android:id="@+id/cat_walk_card_text"
                         android:textColor="@color/main_sky_blue"
                         android:textSize="20sp" />
 
@@ -198,6 +203,7 @@
                         android:layout_centerHorizontal="true"
                         android:fontFamily="@font/montserratblack"
                         android:text="@string/medicines"
+                        android:id="@+id/cat_medicines_card_text"
                         android:textColor="@color/main_sky_blue"
                         android:textSize="15sp" />
 

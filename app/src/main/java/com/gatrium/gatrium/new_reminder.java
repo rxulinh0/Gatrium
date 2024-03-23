@@ -5,12 +5,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.card.MaterialCardView;
 
 public class new_reminder extends AppCompatActivity {
     private MaterialCardView food_card,refill_water_card,cat_litter_card,shower_card,walk_card,medicines_card;
-    private int pet_id;
+    private int pet_id,day_index;
+    private boolean one_day_reminder;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +26,10 @@ public class new_reminder extends AppCompatActivity {
         medicines_card = findViewById(R.id.medicine_card);
         cat_litter_card = findViewById(R.id.change_litter_reminder_card);
         pet_id = getIntent().getIntExtra("pet_id",-1);
+        one_day_reminder = getIntent().getBooleanExtra("one_day_reminder",false);
+        if(one_day_reminder){
+            one_day_reminder_ui_setup();
+        }
         food_card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -74,5 +82,42 @@ public class new_reminder extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+    public void one_day_reminder_ui_setup(){
+        day_index = getIntent().getIntExtra("one_day_index",-1);
+        if(day_index==-1){
+            Toast.makeText(getApplicationContext(),getResources().getString(R.string.error_retrieving_day),Toast.LENGTH_LONG).show();
+            finish();
+        }
+        DayInformation current_day = basic_user_data.getAll_pets().get(pet_id).getCurrentMonthDays().get(day_index);
+        TextView food_card_text,refill_water_card_text,change_cat_litter_card_text,shower_card_text,walk_card_text,medicines_card_text;
+        food_card_text = findViewById(R.id.cat_food_card_text);
+        refill_water_card_text = findViewById(R.id.cat_refill_water_text);
+        change_cat_litter_card_text = findViewById(R.id.cat_change_litter_card_text);
+        shower_card_text = findViewById(R.id.cat_shower_card_text);
+        walk_card_text = findViewById(R.id.cat_walk_card_text);
+        medicines_card_text = findViewById(R.id.cat_medicines_card_text);
+        for(String iterator : current_day.getDisabledReminders()){
+            switch(iterator){
+                case "CAT_FOOD":
+                    food_card.setCardBackgroundColor(getResources().getColor(R.color.main_orange));
+                    food_card_text.setTextColor(getResources().getColor(R.color.main_yellow));
+                case "CAT_REFILL_WATER":
+                    food_card.setCardBackgroundColor(getResources().getColor(R.color.main_orange));
+                    food_card_text.setTextColor(getResources().getColor(R.color.main_yellow));
+                case "CAT_CHANGE_LITTER":
+                    food_card.setCardBackgroundColor(getResources().getColor(R.color.main_orange));
+                    food_card_text.setTextColor(getResources().getColor(R.color.main_yellow));
+                case "CAT_SHOWER":
+                    food_card.setCardBackgroundColor(getResources().getColor(R.color.main_orange));
+                    food_card_text.setTextColor(getResources().getColor(R.color.main_yellow));
+                case "CAT_WALK":
+                    food_card.setCardBackgroundColor(getResources().getColor(R.color.main_orange));
+                    food_card_text.setTextColor(getResources().getColor(R.color.main_yellow));
+                case "MEDICINE":
+                    food_card.setCardBackgroundColor(getResources().getColor(R.color.main_orange));
+                    food_card_text.setTextColor(getResources().getColor(R.color.main_yellow));
+            }
+        }
     }
 }

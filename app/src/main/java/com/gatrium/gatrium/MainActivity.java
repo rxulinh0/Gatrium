@@ -15,12 +15,16 @@ public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        // Splash Screen
         try {
             Thread.sleep(1500);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
         setTheme(androidx.core.splashscreen.R.style.Theme_SplashScreen);
+
+        // TODO: Retrieve user information from GSON "Database" in this lines of code, in a loading screen (splash screen)
+
         if(basic_user_data.isnull()){
             Intent intent = new Intent(MainActivity.this,getting_started.class);
             startActivity(intent);

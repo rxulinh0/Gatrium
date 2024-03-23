@@ -15,6 +15,7 @@ public class getting_started_one_pet extends AppCompatActivity {
     private boolean fromHomeFragmentCarousel = false;
     private boolean toggle_specie = false, isToggle_specie = false; // true(1) for cat <-> false(0) for dog
     private basic_user_data User;
+    private boolean ready_button_toggled = false;
     private TextInputEditText pet_name_input,owner_name_input;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,11 +55,13 @@ public class getting_started_one_pet extends AppCompatActivity {
         ready_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(fromHomeFragmentCarousel){
+                if(ready_button_toggled);
+                else if(fromHomeFragmentCarousel){
                     String pet_name = pet_name_input.getText().toString();
                     if(!pet_name.isEmpty()&&isToggle_specie){
                         saveData(pet_name,toggle_specie);
                         Intent intent = new Intent(getting_started_one_pet.this,MainActivity.class);
+                        ready_button_toggled = true;
                         startActivity(intent);
                     }
                 } else{
@@ -78,10 +81,12 @@ public class getting_started_one_pet extends AppCompatActivity {
         userInstance.setUser_name(owner_name);
         Pet_Data currentPet = new Pet_Data(pet_name,dog_or_cat,false);
         userInstance.addPet(currentPet);
+        userInstance.refreshAddButtonArrayPositionForCarousel();
     }
     public void saveData(String pet_name,boolean dog_or_cat){
         basic_user_data userInstance = basic_user_data.getInstance();
         Pet_Data currentPet = new Pet_Data(pet_name,dog_or_cat,false);
         userInstance.addPet(currentPet);
+        userInstance.refreshAddButtonArrayPositionForCarousel();
     }
 }

@@ -5,11 +5,22 @@ import java.util.ArrayList;
 public class Pet_Data {
     public String pet_name;
     public ArrayList<Reminder> pet_reminders = new ArrayList<>();
+    private ArrayList<DayInformation> currentMonthDays = new ArrayList<>();
     public boolean specie; // false(0) for dog <-> true(1) for cat
     public boolean is_add_button;
     public Pet_Data(String pet_name, boolean specie,boolean is_add_button) {
         this.pet_name = pet_name;
         this.specie = specie;
+        this.is_add_button = is_add_button;
+    }
+
+    public Pet_Data(String pet_name, boolean specie){
+        this.pet_name = pet_name;
+        this.specie = specie;
+    }
+
+    public Pet_Data(boolean is_add_button){
+        this.is_add_button = is_add_button;
     }
 
     public String getPet_name() {
@@ -47,5 +58,13 @@ public class Pet_Data {
     }
     public ArrayList<Reminder> getAllReminders(){
         return pet_reminders;
+    }
+
+    public ArrayList<DayInformation> getCurrentMonthDays() {
+        return currentMonthDays;
+    }
+
+    public void setCurrentMonthDays(ArrayList<DayInformation> currentMonthDays) {
+        this.currentMonthDays = currentMonthDays;
     }
 }

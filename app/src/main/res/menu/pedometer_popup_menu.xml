@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/pedometer_more_vert_option_1"
+        android:icon="@drawable/ic_baseline_settings_blue_24"
+        android:title="@string/settings"/>
+    <item android:id="@+id/pedometer_more_vert_option_2"
+        android:icon="@drawable/visibility_off"
+        android:title="@string/hide"/>
+</menu>

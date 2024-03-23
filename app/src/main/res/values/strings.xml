@@ -25,7 +25,6 @@
     <string name="more_than_one">More than one</string>
     <string name="choose_number_pets">How many are they?:</string>
     <string-array name="num_possible_pets">
-        <item>1</item>
         <item>2</item>
         <item>3</item>
         <item>More than that</item>
@@ -89,8 +88,8 @@
     <string name="monthly">Monthly</string>
     <string name="days">Days</string>
     <string name="new_reminder_medicine_question">Set the details for your Pet\'s Medicine Reminder</string>
-    <string name="how_often_does_your_pet_need_the_medicine">Hours Interval for Reminder</string>
-    <string name="set_name_medicine_reminder">Name for Medicine Reminder</string>
+    <string name="how_often_does_your_pet_need_the_medicine">Dose Frequency</string>
+    <string name="set_name_medicine_reminder">Medicine\'s name</string>
     <string name="reminder_for_medicine">This is a reminder for medicine</string>
     <string name="reminder_refill_water_cat">Refill your cat water</string>
     <string name="reminder_refill_water_dog">Refill your dog water</string>
@@ -118,4 +117,24 @@
     <string name="halfway_there">Halfway there…</string>
     <string name="almost_there">Almost there…</string>
     <string name="pet_name">Pet\'s name</string>
+    <string name="title_dialog_remove_widget">Removing Widget</string>
+    <string name="message_dialog_remove_calendar_widget">Are you sure you want to remove Calendar?</string>
+    <string name="message_dialog_remove_pedometer_widget">Are you sure you want to remove Pedometer?</string>
+    <string name="message_dialog_remove_daily_overview_widget">Are you sure you want to remove Daily Overview?</string>
+    <string name="calendar_remove_widget_snackbar_message">Calendar has been removed from your widgets</string>
+    <string name="pedometer_remove_widget_snackbar_message">Pedometer has been removed from your widgets</string>
+    <string name="daily_overview_remove_widget_snackbar_message">Daily Overview has been hided</string>
+    <string name="daily_overview_added_successfully">Daily Overview added successfully</string>
+    <string name="calendar_added_successfully">Calendar widget added successfully</string>
+    <string name="pedometer_added_successfully">Pedometer widget added successfully</string>
+    <string name="yes_remove_widget">Yes, remove this</string>
+    <string name="no_remove_widget">Keep it</string>
+    <string name="calendar">Calendar</string>
+    <string name="pedometer">Pedometer</string>
+    <string name="daily_overview">Daily Overview</string>
+    <string name="remove">Remove</string>
+    <string name="hide">Hide</string>
+    <string name="sample_date_day_overview">January 28, 2024</string>
+    <string name="make_annotation_hint">Make an annotation for the day...</string>
+    <string name="error_retrieving_day">Unknown exception caused by Calendar\'s Day information</string>
 </resources>

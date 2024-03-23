@@ -87,6 +87,8 @@
                 </RelativeLayout>
 
                 <RelativeLayout
+                    android:id="@+id/spinnerRelativeLayout_more_than_one"
+                    android:visibility="gone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/rel_lay_a"
@@ -103,16 +105,14 @@
             </RelativeLayout>
         </com.google.android.material.card.MaterialCardView>
     </RelativeLayout>
-    <RelativeLayout
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:layout_below="@+id/main_rel_lay">
 
         <ImageView
             android:id="@+id/get_started_arrow"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp"
             android:src="@drawable/ic_baseline_arrow_forward_24" />
-    </RelativeLayout>
 </RelativeLayout>

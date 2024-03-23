@@ -136,7 +136,7 @@ public class new_reminder_cat_food extends AppCompatActivity {
                     this,
                     hour, // Use a unique request code for each alarm to avoid conflicts
                     intent,
-                    0
+                    PendingIntent.FLAG_IMMUTABLE
             );
             int pet_id = getIntent().getIntExtra("pet_id",-1);
             basic_user_data user = basic_user_data.getInstance();
