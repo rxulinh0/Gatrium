@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".pedometer_settings"
+    android:background="@color/main_purple">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="21dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/pedometer_settings_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserratblack"
+                android:text="@string/pedometer_settings"
+                android:textColor="@color/main_sky_blue"
+                android:textSize="60sp" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pedometer_settings_title"
+                android:layout_marginTop="15dp"
+                app:dividerColor="@color/main_sky_blue"
+                app:dividerInsetEnd="32dp"
+                app:dividerInsetStart="32dp"
+                app:dividerThickness="4dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pedometer_settings_title">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/change_steps_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    app:cardBackgroundColor="@color/main_sky_blue"
+                    app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Large">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp">
+
+                        <TextView
+                            android:id="@+id/change_steps_card_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:fontFamily="@font/montserratbold"
+                            android:text="@string/change_goal_setting"
+                            android:textColor="@color/main_purple"
+                            android:textSize="21dp"/>
+
+                        <RelativeLayout
+                            android:id="@+id/goal_setting_slider_rel_lay"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/change_steps_card_title"
+                            android:visibility="gone">
+
+                            <com.google.android.material.divider.MaterialDivider
+                                android:id="@+id/change_number_steps_card_divider"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                app:dividerColor="@color/main_purple"
+                                app:dividerInsetEnd="16dp"
+                                app:dividerInsetStart="16dp"
+                                app:dividerThickness="3dp"/>
+                            <com.google.android.material.slider.Slider
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:valueFrom="1500.0"
+                                android:valueTo="60000.0"
+                                android:stepSize="500.0"
+                                android:id="@+id/pedometer_steps_goal_slider"/>
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

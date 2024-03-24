@@ -137,4 +137,7 @@
     <string name="sample_date_day_overview">January 28, 2024</string>
     <string name="make_annotation_hint">Make an annotation for the day...</string>
     <string name="error_retrieving_day">Unknown exception caused by Calendar\'s Day information</string>
+    <string name="pedometer_settings">Pedometer Settings</string>
+    <string name="change_goal_setting">Change Number of Steps Goal</string>
+    <string name="change_steps_label">Select Number of Steps...</string>
 </resources>

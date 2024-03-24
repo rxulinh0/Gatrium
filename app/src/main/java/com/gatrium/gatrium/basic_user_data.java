@@ -13,6 +13,7 @@ public class basic_user_data {
     private static int last_pet_id_selected_carousel;
     private static int num_pets;
     private static int pedometer_widget_set_number_steps;
+    private static boolean pedometer_widget_number_steps_initialized;
     private static ArrayList<WidgetForHomeRecyclerView> allRecyclerViewWidgets = new ArrayList<>();
     private static int currentMonth;
 
@@ -55,8 +56,9 @@ public class basic_user_data {
     }
 
     public static int getPedometer_widget_set_number_steps() {
-        if(pedometer_widget_set_number_steps == 0){
-            pedometer_widget_set_number_steps = 5000; // If this value is not defined
+        if(!pedometer_widget_number_steps_initialized){
+            pedometer_widget_set_number_steps = 5000;// If this value is not defined
+            pedometer_widget_number_steps_initialized = true;
             // , sets default value for pedometer (5000 steps)
         }
         return pedometer_widget_set_number_steps;
